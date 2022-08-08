@@ -1,8 +1,12 @@
 package principles.ioc.spring.messengers;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import principles.ioc.spring.interfaces.Messenger;
 import principles.ioc.spring.interfaces.TelecomProvider;
 
+@Component
+@Qualifier("whatsup")
 public class WhatsUpMessenger implements Messenger {
 
     private TelecomProvider telecomProvider;

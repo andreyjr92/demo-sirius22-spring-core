@@ -18,7 +18,7 @@ public class MySpringJavaConfig {
     }
 
     @Bean
-    @Qualifier("Telegram")
+    @Qualifier("telegram")
     public Messenger telegramMessenger() {
         return new TelegramMessenger(telecomProvider());
     }
