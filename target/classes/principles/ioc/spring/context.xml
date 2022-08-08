@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="tinkoffMobile" class="principles.ioc.spring.TinkoffMobileProvider"/>
+
+    <bean id="telegram" class="principles.ioc.spring.messengers.TelegramMessenger">
+        <constructor-arg ref="tinkoffMobile"/>
+    </bean>
+    <bean id="ICQ" class="principles.ioc.spring.messengers.ICQMessenger">
+        <constructor-arg ref="tinkoffMobile"/>
+    </bean>
+    <bean id="notificationMessage" class="principles.ioc.spring.MessageNotification">
+        <constructor-arg ref="ICQ"/>
+        <constructor-arg ref="telegram"/>
+    </bean>
+</beans>
