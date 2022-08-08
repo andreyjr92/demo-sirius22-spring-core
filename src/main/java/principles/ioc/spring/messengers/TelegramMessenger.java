@@ -12,10 +12,6 @@ public class TelegramMessenger implements Messenger {
         this.telecomProvider = telecomProvider;
     }
 
-    public TelegramMessenger(TinkoffMobileProvider tinkoffMobileProvider) {
-        this.telecomProvider = telecomProvider;
-    }
-
     private void callMeBackDurov() {
         System.out.println("Pavel, what's happened with VK? Call me back!");
     }

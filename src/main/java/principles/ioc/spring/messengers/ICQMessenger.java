@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 import principles.ioc.spring.interfaces.Messenger;
 import principles.ioc.spring.interfaces.TelecomProvider;
 
-@Component("ICQ")
-@Primary
 public class ICQMessenger implements Messenger {
 
     private TelecomProvider telecomProvider;
